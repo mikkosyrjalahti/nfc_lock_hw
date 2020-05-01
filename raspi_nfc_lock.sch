@@ -16,8 +16,6 @@ Comment4 ""
 $EndDescr
 Text Label 7700 2900 0    50   ~ 0
 *CE0
-Text Label 7700 2800 0    50   ~ 0
-*CE1
 Text Label 7700 3000 0    50   ~ 0
 MISO
 Text Label 7700 3100 0    50   ~ 0
@@ -533,8 +531,6 @@ Wire Wire Line
 	7900 3200 7900 4350
 Wire Wire Line
 	7900 4350 8250 4350
-Wire Wire Line
-	7400 2800 7700 2800
 $Comp
 L power:+5V #PWR0129
 U 1 1 5E84B72E
@@ -580,7 +576,7 @@ Wire Wire Line
 Wire Wire Line
 	8950 3200 8950 3300
 Wire Wire Line
-	8950 3300 8750 3300
+	8950 3300 8850 3300
 Wire Wire Line
 	8750 3300 8750 3350
 Wire Wire Line
@@ -775,7 +771,7 @@ APA102 LED strip
 Text Notes 10100 1450 0    79   ~ 0
 12V lock solenoid
 Wire Wire Line
-	6750 5250 7350 5250
+	6750 5250 7050 5250
 Wire Wire Line
 	1650 5350 1650 5400
 Wire Wire Line
@@ -1415,8 +1411,6 @@ Wire Wire Line
 Wire Wire Line
 	5000 850  5000 1800
 Wire Wire Line
-	5000 1800 4650 1800
-Wire Wire Line
 	3850 1500 3850 1550
 $Comp
 L power:+3.3V #PWR0139
@@ -1541,28 +1535,6 @@ Wire Wire Line
 	1800 2000 1350 2000
 Connection ~ 1350 2000
 $Comp
-L Power_Protection:PESD3V3L4UF D111
-U 1 1 5EAEA308
-P 6250 5450
-F 0 "D111" V 6400 5550 50  0000 L CNN
-F 1 "PESD3V3L4UF" V 6295 5518 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-886" H 6250 5450 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/PESDXL4UF_G_W.pdf" H 6250 5450 50  0001 C CNN
-	1    6250 5450
-	0    1    1    0   
-$EndComp
-$Comp
-L Power_Protection:PESD3V3L4UF D111
-U 2 1 5EAEC2B3
-P 6050 5450
-F 0 "D111" V 6150 5000 50  0000 L CNN
-F 1 "PESD3V3L4UF" V 6050 4800 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-886" H 6050 5450 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/PESDXL4UF_G_W.pdf" H 6050 5450 50  0001 C CNN
-	2    6050 5450
-	0    1    1    0   
-$EndComp
-$Comp
 L Transistor_BJT:MMBT3904 Q103
 U 1 1 5EAEFABB
 P 2250 7150
@@ -1610,7 +1582,7 @@ $Comp
 L Device:R R130
 U 1 1 5EAF67FF
 P 2100 6500
-F 0 "R130" H 2050 6750 50  0000 L CNN
+F 0 "R130" H 2200 6550 50  0000 L CNN
 F 1 "0R" V 2100 6450 50  0000 L CNN
 F 2 "Resistors_SMD:R_0603_HandSoldering" V 2030 6500 50  0001 C CNN
 F 3 "~" H 2100 6500 50  0001 C CNN
@@ -1688,19 +1660,6 @@ F 3 "~" H 6500 5350 50  0001 C CNN
 	1    6500 5350
 	0    1    1    0   
 $EndComp
-$Comp
-L power:GND #PWR0144
-U 1 1 5EC7156F
-P 6250 5600
-F 0 "#PWR0144" H 6250 5350 50  0001 C CNN
-F 1 "GND" H 6255 5427 50  0000 C CNN
-F 2 "" H 6250 5600 50  0001 C CNN
-F 3 "" H 6250 5600 50  0001 C CNN
-	1    6250 5600
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6250 5550 6250 5600
 Wire Wire Line
 	6050 5350 6050 5150
 Wire Wire Line
@@ -1718,13 +1677,12 @@ Wire Wire Line
 	5550 5300 6250 5300
 Wire Wire Line
 	6250 5300 6250 5350
-Connection ~ 6250 5350
 Wire Wire Line
 	6750 5250 6750 5150
 Wire Wire Line
 	6750 5150 6650 5150
 Wire Wire Line
-	6650 5350 7350 5350
+	6650 5350 6850 5350
 $Comp
 L Mechanical:MountingHole H101
 U 1 1 5ED00361
@@ -1976,10 +1934,10 @@ V_fb=1.23V
 Wire Wire Line
 	1200 3700 1200 3850
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0145
 U 1 1 5EB515A2
 P 1650 4200
-F 0 "#PWR?" H 1650 3950 50  0001 C CNN
+F 0 "#PWR0145" H 1650 3950 50  0001 C CNN
 F 1 "GND" H 1800 4150 50  0000 C CNN
 F 2 "" H 1650 4200 50  0001 C CNN
 F 3 "" H 1650 4200 50  0001 C CNN
@@ -2025,4 +1983,159 @@ Wire Wire Line
 	5400 2300 5800 2300
 Wire Wire Line
 	5450 3400 5800 3400
+Text Label 7550 3400 0    50   ~ 0
+BUZZER
+Wire Wire Line
+	7400 3400 7550 3400
+Text Label 9300 3950 0    50   ~ 0
+NFC_CS
+Text Label 9200 4050 0    50   ~ 0
+NFC_MISO
+Text Label 9200 4150 0    50   ~ 0
+NFC_MOSI
+Text Label 9250 4250 0    50   ~ 0
+NFC_SCK
+Text Label 9650 2200 0    50   ~ 0
+LOCK_SOLENOID
+Text Label 2350 6800 0    50   ~ 0
+BUZZ
+Text Label 6800 5250 0    50   ~ 0
+LED_DATA
+Text Label 6800 5350 0    50   ~ 0
+LED_CLK
+Text Label 850  2550 0    50   ~ 0
+PWR_IN
+NoConn ~ 5800 1900
+NoConn ~ 5800 1800
+NoConn ~ 5800 2500
+NoConn ~ 5800 2100
+NoConn ~ 5800 3100
+NoConn ~ 5800 3200
+NoConn ~ 5800 3300
+NoConn ~ 7400 3500
+NoConn ~ 7400 2500
+NoConn ~ 7400 2600
+NoConn ~ 7400 2800
+NoConn ~ 7400 2200
+NoConn ~ 7400 2100
+NoConn ~ 7400 1900
+NoConn ~ 7400 1800
+NoConn ~ 9750 1500
+NoConn ~ 10400 4200
+Wire Wire Line
+	8150 3550 8150 2900
+Wire Wire Line
+	8150 2900 8550 2900
+Wire Wire Line
+	8150 3550 8250 3550
+NoConn ~ 5500 7300
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5EF16813
+P 1800 1600
+F 0 "#FLG0101" H 1800 1675 50  0001 C CNN
+F 1 "PWR_FLAG" H 1800 1773 50  0000 C CNN
+F 2 "" H 1800 1600 50  0001 C CNN
+F 3 "~" H 1800 1600 50  0001 C CNN
+	1    1800 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 1800 4900 1800
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5EF1A946
+P 4900 1800
+F 0 "#FLG0102" H 4900 1875 50  0001 C CNN
+F 1 "PWR_FLAG" H 4900 1973 50  0000 C CNN
+F 2 "" H 4900 1800 50  0001 C CNN
+F 3 "~" H 4900 1800 50  0001 C CNN
+	1    4900 1800
+	1    0    0    -1  
+$EndComp
+Connection ~ 4900 1800
+Wire Wire Line
+	4900 1800 4650 1800
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 5EF1BED7
+P 6700 1200
+F 0 "#FLG0103" H 6700 1275 50  0001 C CNN
+F 1 "PWR_FLAG" H 7050 1300 50  0000 C CNN
+F 2 "" H 6700 1200 50  0001 C CNN
+F 3 "~" H 6700 1200 50  0001 C CNN
+	1    6700 1200
+	1    0    0    -1  
+$EndComp
+Connection ~ 6700 1200
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 5EF1D511
+P 8850 3300
+F 0 "#FLG0104" H 8850 3375 50  0001 C CNN
+F 1 "PWR_FLAG" H 8850 3473 50  0000 C CNN
+F 2 "" H 8850 3300 50  0001 C CNN
+F 3 "~" H 8850 3300 50  0001 C CNN
+	1    8850 3300
+	1    0    0    -1  
+$EndComp
+Connection ~ 8850 3300
+Wire Wire Line
+	8850 3300 8750 3300
+$Comp
+L power:PWR_FLAG #FLG0105
+U 1 1 5EF1E655
+P 1650 2600
+F 0 "#FLG0105" H 1650 2675 50  0001 C CNN
+F 1 "PWR_FLAG" H 1650 2773 50  0000 C CNN
+F 2 "" H 1650 2600 50  0001 C CNN
+F 3 "~" H 1650 2600 50  0001 C CNN
+	1    1650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0146
+U 1 1 5EF1EF3E
+P 1650 2600
+F 0 "#PWR0146" H 1650 2350 50  0001 C CNN
+F 1 "GND" H 1655 2427 50  0000 C CNN
+F 2 "" H 1650 2600 50  0001 C CNN
+F 3 "" H 1650 2600 50  0001 C CNN
+	1    1650 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Protection:SP0502BAHT D111
+U 1 1 5EF2AD96
+P 6950 5950
+F 0 "D111" H 7155 5996 50  0000 L CNN
+F 1 "SP0502BAHT" H 7155 5905 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7175 5900 50  0001 L CNN
+F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 7075 6075 50  0001 C CNN
+	1    6950 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0144
+U 1 1 5EF2BC40
+P 6950 6250
+F 0 "#PWR0144" H 6950 6000 50  0001 C CNN
+F 1 "GND" H 6955 6077 50  0000 C CNN
+F 2 "" H 6950 6250 50  0001 C CNN
+F 3 "" H 6950 6250 50  0001 C CNN
+	1    6950 6250
+	1    0    0    -1  
+$EndComp
+Connection ~ 6850 5350
+Wire Wire Line
+	6850 5350 7350 5350
+Connection ~ 7050 5250
+Wire Wire Line
+	7050 5250 7350 5250
+Wire Wire Line
+	6950 6150 6950 6250
+Wire Wire Line
+	6850 5350 6850 5750
+Wire Wire Line
+	7050 5250 7050 5750
 $EndSCHEMATC
