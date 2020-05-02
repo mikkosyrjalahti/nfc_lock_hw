@@ -468,17 +468,6 @@ F 3 "" H 9450 4500 50  0001 C CNN
 	1    9450 4500
 	1    0    0    -1  
 $EndComp
-$Comp
-L Logic_LevelTranslator:TXB0104D U103
-U 1 1 5E7EC016
-P 8650 4050
-F 0 "U103" H 8650 3261 50  0000 C CNN
-F 1 "TXB0104D" H 8950 3400 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 8650 3300 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 8760 4145 50  0001 C CNN
-	1    8650 4050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9450 3750 9450 3850
 Wire Wire Line
@@ -2135,4 +2124,15 @@ Text Label 5550 5300 0    50   ~ 0
 APA102_CLK
 Wire Wire Line
 	5550 5150 6350 5150
+$Comp
+L Logic_LevelTranslator:TXB0104PW U?
+U 1 1 5EAEF6B1
+P 8650 4050
+F 0 "U?" H 8650 3261 50  0000 C CNN
+F 1 "TXB0104PW" H 8650 3170 50  0000 C CNN
+F 2 "Package_SO:TSSOP-14_4.4x5mm_P0.65mm" H 8650 3300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/txb0104.pdf" H 8760 4145 50  0001 C CNN
+	1    8650 4050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
